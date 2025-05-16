@@ -21,3 +21,12 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+
+export function renderListWithTemplate(templateFn, parentElement, productList, position = 'afterbegin', clear = false) {
+  const htmlStrings = productList.map(templateFn);
+
+  if (clear) {
+    parentElement.innerHTML = "";
+  }
+  parentElement.innerAdjacentHTML(position, htmlStrings.join(""));
+}
