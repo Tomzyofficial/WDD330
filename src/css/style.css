@@ -241,6 +241,11 @@ button {
   grid-column: 3;
 }
 
+.cart-remove__btn {
+  cursor: pointer;
+  font-size: large;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
