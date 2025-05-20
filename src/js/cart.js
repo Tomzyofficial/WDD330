@@ -7,16 +7,12 @@ function renderCartContents() {
   const htmlItems = cartItems.map((item) => cartItemTemplate(item));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
   if (cartItems) {
-    //If the cart has items, iterate through the array and get the prices for the items. Add up the prices and display them in the div
-    console.log("Products Exist!");
     let totalPrice = 0;
     cartItems.forEach((item) => {
       totalPrice += item.FinalPrice;
     });
     total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
     total.style.display = "block";
-  } else {
-    console.log("No Products...");
   }
 }
 
