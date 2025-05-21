@@ -44,8 +44,8 @@ export function renderWithTemplate(template, parentElement, data, callback) {
   }
 }
 
-async function loadTemplate(file) {
-  const file = await fetch(file);
+async function loadTemplate(path) {
+  const file = await fetch(path);
   const textFile = await file.text();
   return textFile;
 }
