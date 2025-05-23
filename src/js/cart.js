@@ -30,7 +30,12 @@ function cartItemTemplate(item) {
     <h2 class="card__name">${item.Name}</h2>
   </a>
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
-  <p class="cart-card__quantity">qty: 1</p>
+  <p class="cart-card__quantity">
+    <button class="add-button">+</button>
+    <input type="number" id="item-quality" value="1" min="1">
+    <button class="decrease-button">-</button>
+
+    </p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
   <p class="cart-remove__btn">X</p>
 </li>`;
@@ -57,5 +62,17 @@ function removeCartItem(e) {
     renderCartContents();
   }
 }
+
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("add-button")) {
+    const input = event.target.nextElementSibling;
+    if (input) input.value = parseInt(input.value) + 1;
+  } else if (event.target.classList.contains("decrease-button")) {
+    const input = event.target.previousElementSibling;
+    if (input && parseInt(input.value) > 1) {
+      input.value = parseInt(input.value) - 1;
+    }
+  }
+});
 
 renderCartContents();
