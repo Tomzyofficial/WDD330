@@ -32,7 +32,7 @@ function cartItemTemplate(item) {
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">
     <button class="add-button">+</button>
-    <input type="number" id="item-quality" value="1" min="1">
+    <input type="number" id="item-quantity" value="1" min="1">
     <button class="decrease-button">-</button>
 
     </p>

@@ -99,7 +99,7 @@ p {
   color: var(--tertiary-color);
 }
 
-button {
+#addToCart {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
   color: white;
@@ -236,8 +236,33 @@ button {
 }
 
 .cart-card__quantity {
+  display: grid;
   grid-row: 1;
   grid-column: 3;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.add-button {
+  width: 35px;
+  height: 35px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: 0;
+  font-size: 20px;
+}
+
+#item-quantity {
+  width: 40px;
+}
+
+.decrease-button {
+  width: 35px;
+  height: 35px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: 0;
+  font-size: 20px;
 }
 
 .cart-card__price {
