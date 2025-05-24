@@ -270,6 +270,10 @@ p {
   grid-column: 3;
 }
 
+.title {
+  text-transform: capitalize;
+}
+
 .cart-remove__btn {
   cursor: pointer;
   font-size: large;
