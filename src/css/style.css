@@ -90,7 +90,7 @@ p {
   margin-top: -1.3em;
 }
 
-.logo--square > div {
+.logo--square>div {
   margin-top: -1.7em;
 }
 
@@ -99,7 +99,7 @@ p {
   color: var(--tertiary-color);
 }
 
-#addToCart {
+#add-to-cart {
   padding: 0.5em 2em;
   background-color: var(--secondary-color);
   color: white;
