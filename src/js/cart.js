@@ -1,4 +1,9 @@
-import { getLocalStorage, loadHeaderFooter } from "./utils.mjs";
+import {
+  getLocalStorage,
+  loadHeaderFooter,
+  getCartCount,
+  updateCartCount,
+} from "./utils.mjs";
 
 loadHeaderFooter();
 
@@ -47,6 +52,8 @@ function cartItemTemplate(item) {
 document.querySelector(".product-list").addEventListener("click", function (e) {
   if (e.target.classList.contains("cart-remove__btn")) {
     removeCartItem(e);
+    getCartCount();
+    updateCartCount();
   }
 });
 

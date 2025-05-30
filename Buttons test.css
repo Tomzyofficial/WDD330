@@ -1,0 +1,25 @@
+div#body {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+button {
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: large;
+  color: white;
+}
+
+#button1 {
+  background-image: linear-gradient(to right, #a61010, #b44d12);
+}
+#button2 {
+  background-image: linear-gradient(to right, #bbb516, #42930f);
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+#button3 {
+  background-image: linear-gradient(to right, #3314e2, #7e10c2);
+  grid-row: 3/4;
+}
