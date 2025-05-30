@@ -131,6 +131,20 @@ p {
   fill: gray;
 }
 
+.cart-count {
+  position: absolute;
+  top: 4px;
+  right: -8px;
+  background: orange;
+  color: purple;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+  min-width: 12px;
+  text-align: center;
+}
+
 .cartTotal {
   display: none;
 }
