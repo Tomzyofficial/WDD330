@@ -54,8 +54,19 @@ export async function loadHeaderFooter() {
   const loadHeader = await loadTemplate("../partials/header.html");
   const header = document.getElementById("header");
   renderWithTemplate(loadHeader, header);
+  getCartCount();
+  updateCartCount();
 
   const footer = document.getElementById("footer");
   const loadFooter = await loadTemplate("../partials/footer.html");
   renderWithTemplate(loadFooter, footer);
+}
+
+export function getCartCount() {
+  const cartCount = getLocalStorage("so-cart") || [];
+  return cartCount.length;
+}
+
+export function updateCartCount() {
+  document.querySelector(".cart-count").textContent = getCartCount();
 }

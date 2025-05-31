@@ -135,6 +135,20 @@ p {
   display: none;
 }
 
+.cart-count {
+  position: absolute;
+  top: 4px;
+  right: -8px;
+  background: orange;
+  color: purple;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+  min-width: 12px;
+  text-align: center;
+}
+
 /* Checkout form */
 fieldset {
   display: grid;
@@ -184,9 +198,6 @@ button:active {
 
 button:focus {
   outline: none;
-}
-
-section:nth-child(2) {
 }
 
 /* end of checkout page css */
