@@ -1,94 +1,116 @@
 <!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleep Outside | Checkout</title>
 
-  <title>Sleep Outside | Checkout</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/checkout.js" type="module"></script>
+  </head>
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <script src="../js/checkout.js" type="module"></script>
-</head>
+  <body>
+    <header class="divider" id="header"></header>
 
-<body>
-  <header class="divider" id="header"></header>
+    <main class="divider">
+      <section class="products">
+        <h2>Review & Place your Order</h2>
 
-  <main class="divider">
-    <section class="products">
-      <h2>Review & Place your Order</h2>
+        <form name="checkout">
+          <input type="hidden" name="orderDate" id="orderDate" />
 
-      <form name="checkout">
-        <input type="hidden" name="orderDate" id="orderDate">
+          <fieldset>
+            <div>
+              <label for="fname"
+                >First Name
+                <input type="text" id="fname" name="fname" required />
+              </label>
+            </div>
+            <div>
+              <label for="lname"
+                >Last Name
+                <input type="text" id="lname" name="lname" required />
+              </label>
+            </div>
+            <div>
+              <label for="street_addr"
+                >Street Address
+                <input
+                  type="text"
+                  id="street_addr"
+                  name="street_addr"
+                  required
+                />
+              </label>
+            </div>
+            <div>
+              <label for="city"
+                >City
+                <input type="text" id="city" name="city" required />
+              </label>
+            </div>
+            <div>
+              <label for="state"
+                >State
+                <input type="text" id="state" name="state" required />
+              </label>
+            </div>
+            <div>
+              <label for="zip"
+                >Zip Code
+                <input type="text" id="zip" name="zip" required />
+              </label>
+            </div>
+            <div>
+              <label for="c_number"
+                >Card Number
+                <input type="text" id="c_number" name="c_number" required />
+              </label>
+            </div>
+            <div>
+              <label for="expire_date"
+                >Expiration Date
+                <input
+                  type="text"
+                  id="expire_date"
+                  name="expire_date"
+                  required
+                />
+              </label>
+            </div>
+            <div>
+              <label for="security_code"
+                >CVV
+                <input
+                  type="text"
+                  id="security_code"
+                  name="security_code"
+                  required
+                />
+              </label>
+            </div>
+            <div class="order__summary checkout-summary">
+              <button type="submit" id="checkoutSubmit">Order Now</button>
+              <div>Order Summary</div>
+              <div>Items</div>
+              <div id="num-items"></div>
+              <div>Subtotal</div>
+              <div id="cartTotal"></div>
+              <div>Tax</div>
+              <div id="tax"></div>
+              <div>Shipping</div>
+              <div id="shipping"></div>
+              <div>Total</div>
+              <div id="orderTotal"></div>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
 
-        <fieldset>
-          <div>
-            <label for="fname">First Name
-              <input type="text" id="fname" name="fname" required>
-            </label>
-          </div>
-          <div>
-            <label for="lname">Last Name
-              <input type="text" id="lname" name="lname" required>
-            </label>
-          </div>
-          <div>
-            <label for="street_addr">Street Address
-              <input type="text" id="street_addr" name="street_addr" required>
-            </label>
-          </div>
-          <div>
-            <label for="city">City
-              <input type="text" id="city" name="city" required>
-            </label>
-          </div>
-          <div>
-            <label for="state">State
-              <input type="text" id="state" name="state" required>
-            </label>
-          </div>
-          <div>
-            <label for="zip">Zip Code
-              <input type="text" id="zip" name="zip" required>
-            </label>
-          </div>
-          <div>
-            <label for="c_number">Card Number
-              <input type="text" id="c_number" name="c_number" required>
-            </label>
-          </div>
-          <div>
-            <label for="expire_date">Expiration Date
-              <input type="text" id="expire_date" name="expire_date" required>
-            </label>
-          </div>
-          <div>
-            <label for="security_code">CVV
-              <input type="text" id="security_code" name="security_code" required>
-            </label>
-          </div>
-          <div class="order__summary checkout-summary">
-            <button type="submit" id="checkoutSubmit">Order Now</button>
-            <div>Order Summary</div>
-            <div>Items</div>
-            <div id="num-items"></div>
-            <div>Subtotal</div>
-            <div id="cartTotal"></div>
-            <div>Tax</div>
-            <div id="tax"></div>
-            <div>Shipping</div>
-            <div id="shipping"></div>
-            <div>Total</div>
-            <div id="orderTotal"></div>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-  </main>
-
-  <footer id="footer"></footer>
-</body>
-
+    <footer id="footer"></footer>
+  </body>
 </html>
