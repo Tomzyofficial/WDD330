@@ -1,4 +1,4 @@
-import { getCartCount, getLocalStorage, setLocalStorage, updateCartCount } from "./utils.mjs";
+import { getCartCount, getLocalStorage, setLocalStorage, updateCartCount, alertMessage } from "./utils.mjs";
 
 export default class ProductDetails {
   constructor(productId, dataSource) {
@@ -14,9 +14,17 @@ export default class ProductDetails {
 
   }
   addProductToCart() {
-    const cartItems = getLocalStorage("so-cart") || [];
-    cartItems.push(this.product);
-    setLocalStorage("so-cart", cartItems);
+
+    let cartContents = getLocalStorage("so-cart");
+    //check to see if there was anything there
+    if (!cartContents) {
+      cartContents = [];
+    }
+    // then add the current product to the list
+    cartContents.push(this.product);
+    setLocalStorage("so-cart", cartContents);
+    alertMessage(`${this.product.NameWithoutBrand} added to cart!`);
+
     getCartCount();
     updateCartCount();
   }
