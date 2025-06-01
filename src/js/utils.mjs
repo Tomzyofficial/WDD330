@@ -30,6 +30,7 @@ export function getParam(param) {
 }
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false) {
+
   if (clear) {
     parentElement.innerHTML = "";
   }
@@ -38,7 +39,7 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
 }
 
 export function renderWithTemplate(template, parentElement, data, callback) {
-  parentElement.innerHTML = template;
+  parentElement.insertAdjacentHTML("afterbegin", template);
   if (callback) {
     callback(data);
   }
@@ -60,6 +61,35 @@ export async function loadHeaderFooter() {
   const footer = document.getElementById("footer");
   const loadFooter = await loadTemplate("../partials/footer.html");
   renderWithTemplate(loadFooter, footer);
+}
+
+export function alertMessage(message, scroll = true, duration = 3000) {
+  const alert = document.createElement("div");
+  alert.classList.add("alert");
+  alert.innerHTML = `<p>${message}</p><span>X</span>`;
+
+  alert.addEventListener("click", function (e) {
+    if (e.target.tagName == "SPAN") {
+      main.removeChild(this);
+    } else {
+      console.log("not defined");
+    }
+  });
+  const main = document.querySelector("main");
+  main.prepend(alert);
+  // make sure they see the alert by scrolling to the top of the window
+  //we may not always want to do this...so default to scroll=true, but allow it to be passed in and overridden.
+  if (scroll) window.scrollTo(0, 0);
+
+  // left this here to show how you could remove the alert automatically after a certain amount of time.
+  // setTimeout(function () {
+  //   main.removeChild(alert);
+  // }, duration);
+}
+
+export function removeAllAlerts() {
+  const alerts = document.querySelectorAll(".alert");
+  alerts.forEach((alert) => document.querySelector("main").removeChild(alert));
 }
 
 export function getCartCount() {
