@@ -24,7 +24,7 @@
   border: 1px solid darkorange;
 }
 
-.alert > p {
+.alert>p {
   margin: 0;
 }
 
@@ -106,7 +106,7 @@ p {
   margin-top: -1.3em;
 }
 
-.logo--square > div {
+.logo--square>div {
   margin-top: -1.7em;
 }
 
@@ -150,6 +150,12 @@ p {
 /* .cartTotal {
   display: none;
 } */
+/* animate the cart icon */
+.animate {
+  animation: bounce 0.5s ease-in-out;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
 
 .list-footer {
   display: flex;
@@ -158,7 +164,7 @@ p {
   padding: 0 0.5em;
 }
 
-.list-footer > a {
+.list-footer>a {
   /* display: block; */
   padding: 0.3em 0.5em;
   background-color: var(--primary-color);

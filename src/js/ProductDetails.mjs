@@ -20,6 +20,11 @@ export default class ProductDetails {
     if (!cartContents) {
       cartContents = [];
     }
+    /*  if (cartContents.some(item => item.Id === this.product.Id)) {
+       alertMessage(`${this.product.NameWithoutBrand} is already in your cart!`);
+       return;
+     } */
+
     // then add the current product to the list
     cartContents.push(this.product);
     setLocalStorage("so-cart", cartContents);
@@ -27,7 +32,17 @@ export default class ProductDetails {
 
     getCartCount();
     updateCartCount();
+
+    // get the cart icon for animation whenever an item is added
+    const cartIcon = document.querySelector(".cart");
+    // animate the cart icon      
+    cartIcon.classList.add("animate");
+    // remove the animation class after 1 second
+    setTimeout(() => {
+      cartIcon.classList.remove("animate");
+    }, 1000);
   }
+
   renderProductDetails() {
     htmlTemplate(this.product)
   }
