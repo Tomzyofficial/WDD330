@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&family=Unkempt:wght@400;700&display=swap');
+/* Start of mobile home page css */
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Unkempt";
+    font-weight: 700;
+}
+
+#saves {
+    background: url("../images/sketchbook-icon.png");
+    background-color: white;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+
+#question {
+    font-family: "Chewy";
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+main button {
+    width: 398px;
+    height: 63px;
+    font-family: "Cherry Bomb One";
+    font-size: 30px;
+
+}
