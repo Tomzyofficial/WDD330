@@ -16,7 +16,7 @@
   <body>
     <header class="divider">
       <div class="logo">
-        <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+        <img src="../public/images/noun_Tent_2517.svg" alt="tent image for logo" />
         <a href="../index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
 
@@ -60,11 +60,15 @@
 
         <h2 class="divider">Rimrock Tent - 2-Person, 3-Season</h2>
 
-        <img
-          class="divider"
-          src="../images/tents/cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg"
-          alt="Rimrock Tent - 2-Person, 3-Season"
-        />
+        <picture>
+          <source srcset="../public/images/tents/cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg" media="(max-width: 600px)">
+        
+          <source srcset="../public/images/tents/md-cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.webp" media="(min-width: 601px) and (max-width: 1000px)">
+        
+          <source srcset="../public/images/tents" media="(min-width: 1001px)">
+        
+          <img src="../public/images/tents/lg-cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg" alt="Rimrock Tent - 2-Person, 3-Season" style="width:auto;">
+        </picture>
 
         <p class="product-card__price">$69.99</p>
 

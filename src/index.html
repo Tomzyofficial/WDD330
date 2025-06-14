@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sleep Outside | Home</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/main.js" type="module"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" type="module"></script>
   </head>
 
   <body>
     <header class="divider" id="header">
       <div class="logo">
-        <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+        <picture>
+          <source srcset="./public/images/noun_Tent_2517.svg" media="(max-width: 600px)">
+        
+          <source srcset="./public/images/noun_Tent_2517.svg" media="(min-width: 601px) and (max-width: 1000px)">
+        
+          <source srcset="./public/images/noun_Tent_2517.svg" media="(min-width: 1001px)">
+        
+          <img src="./public/images/noun_Tent_2517.svg" alt="tent image for logo" style="width:auto;">
+        </picture>
         <a href="index.html"> Sleep<span class="highlight">Outside</span></a>
       </div>
       <div class="cart">
@@ -44,13 +52,27 @@
     </header>
     <main class="divider">
       <div class="hero">
-        <img
-          src="/images/banner-sm.jpg"
-          srcset="images/banner-sm.jpg 500w, images/banner.jpg"
-          alt="image of a high mountain lake"
-        />
+        <picture>
+          <source srcset="./public/images/banner-sm.jpg" media="(max-width: 600px)">
+        
+          <source srcset="./public/images/banner-md.jpg" media="(min-width: 601px) and (max-width: 1000px)">
+        
+          <source srcset="./public/images/banner-lg.jpg" media="(min-width: 1001px)">
+        
+          <img src="./public/images/banner-md.jpg" alt="image of a high mountain lake" style="width:auto;">
+        </picture>
+        
         <div class="logo logo--square">
-          <img src="/images/noun_Tent_2517.svg" alt="tent image for logo" />
+          <picture>
+            <source srcset="./public/images/noun_Tent_2517.svg" media="(max-width: 600px)">
+          
+            <source srcset="./public/images/noun_Tent_2517.svg" media="(min-width: 601px) and (max-width: 1000px)">
+          
+            <source srcset="./public/images/noun_Tent_2517.svg" media="(min-width: 1001px)">
+          
+            <img src="./public/images/noun_Tent_2517.svg" alt="tent image for logo" style="width:auto;">
+          </picture>
+          
           <div>Sleep<span class="highlight">Outside</span></div>
         </div>
         <div class="mission">
@@ -64,10 +86,17 @@
       <section class="products">
         <h2>Top Products</h2>
         <ul class="product-list">
-          <!-- <li class="product-card">
+          <li class="product-card">
           <a href="product_pages/?product=880RR">
-            <img src="images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg"
-              alt="Marmot Ajax tent" />
+            <picture>
+              <source srcset="./public/images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg" media="(max-width: 600px)">
+            
+              <source srcset="./public/images/tents/md-marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.webp" media="(min-width: 601px) and (max-width: 1000px)">
+            
+              <source srcset="./public/images/tents/lg-marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg" media="(min-width: 1001px)">
+            
+              <img src="./public/images/tents/md-marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.webp" alt="Marmot Ajax tent" style="width:auto;">
+            </picture>
             <h3 class="card__brand">Marmot</h3>
             <h2 class="card__name">Ajax Tent - 3-Person, 3-Season</h2>
             <p class="product-card__price">$199.99</p>
@@ -75,9 +104,15 @@
         </li>
         <li class="product-card">
           <a href="product_pages/?product=985RF">
-            <img
-              src="images/tents/the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg"
-              alt="Talus Tent - 4-Person, 3-Season" />
+            <picture>
+              <source srcset="./public/images/tents/the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg" media="(max-width: 600px)">
+            
+              <source srcset="./public/images/tents/md-the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.webp" media="(min-width: 601px) and (max-width: 1000px)">
+            
+              <source srcset="./public/images/tents/lg-the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg" media="(min-width: 1001px)">
+            
+              <img src="./public/images/tents/md-the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.webp" alt="Talus Tent - 4-Person, 3-Season" style="width:auto;">
+            </picture>
             <h3 class="card__brand">The North Face</h3>
             <h2 class="card__name">Talus Tent - 4-Person, 3-Season</h2>
             <p class="product-card__price">$199.99</p>
@@ -85,9 +120,15 @@
         </li>
         <li class="product-card">
           <a href="product_pages/?product=985PR">
-            <img
-              src="images/tents/the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.jpg"
-              alt="Alpine Guide Tent - 3-Person, 4-Season" />
+            <picture>
+              <source srcset="./public/images/tents/the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.jpg" media="(max-width: 600px)">
+            
+              <source srcset="./public/images/tents/md-the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.webp" media="(min-width: 601px) and (max-width: 1000px)">
+            
+              <source srcset="./public/images/tents/lg-the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.jpg" media="(min-width: 1001px)">
+            
+              <img src="./public/images/tents/md-the-north-face-alpine-guide-tent-3-person-4-season-in-canary-yellow-high-rise-grey~p~985pr_01~320.webp" alt="Alpine Guide Tent - 3-Person, 4-Season" style="width:auto;">
+            </picture>
             <h3 class="card__brand">The North Face</h3>
             <h2 class="card__name">Alpine Guide Tent - 3-Person, 4-Season</h2>
             <p class="product-card__price">$349.99</p>
@@ -95,13 +136,20 @@
         </li>
         <li class="product-card">
           <a href="product_pages/?product=344YJ">
-            <img src="images/tents/cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg"
-              alt="Rimrock Tent - 2-Person, 3-Season" />
+            <picture>
+              <source srcset="./public/images/tents/cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg" media="(max-width: 600px)">
+            
+              <source srcset="./public/images/tents/md-cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.webp" media="(min-width: 601px) and (max-width: 1000px)">
+            
+              <source srcset="./public/images/tents/lg-cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.jpg" media="(min-width: 1001px)">
+            
+              <img src="./public/images/tents/md-cedar-ridge-rimrock-tent-2-person-3-season-in-rust-clay~p~344yj_01~320.webp" alt="Rimrock Tent - 2-Person, 3-Season" style="width:auto;">
+            </picture>
             <h3 class="card__brand">Cedar Ridge</h3>
             <h2 class="card__name">Rimrock Tent - 2-Person, 3-Season</h2>
             <p class="product-card__price">$69.99</p>
           </a>
-        </li> -->
+        </li>
         </ul>
       </section>
     </main>
