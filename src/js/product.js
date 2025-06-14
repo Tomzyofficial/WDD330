@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { getParam, loadHeaderFooter } from "./utils.mjs";
+=======
+import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+>>>>>>> 37a5af5dd56e5683d626f2b15ccb10053bbc1b57
 import ProductData from "./ProductData.mjs";
 import ProductDetails from "./ProductDetails.mjs";
 

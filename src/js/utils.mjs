@@ -22,6 +22,7 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
+<<<<<<< HEAD
 export function getParam(param) {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -59,3 +60,9 @@ export async function loadHeaderFooter() {
   const loadFooter = await loadTemplate("../partials/footer.html");
   renderWithTemplate(loadFooter, footer);
 }
+=======
+export function renderListWithTemplate(templateFn, parentElement, list, position = 'afterbegin', clear = false) {
+  const htmlStrings = list.map(productCardTemplate);
+  this.listElement.insertAdjacentHTML('afterbegin', htmlStrings.join(''));
+}
+>>>>>>> 37a5af5dd56e5683d626f2b15ccb10053bbc1b57
