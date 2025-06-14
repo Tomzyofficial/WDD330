@@ -3,29 +3,47 @@
 header {
     background-color: black;
     color: white;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
     font-family: "Unkempt";
     font-weight: 700;
+    /* align-items: center; */
+    justify-items: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 50px;
+    grid-column: 1 /-1;
+    text-align: center;
 }
 
 #saves {
     background: url("../images/sketchbook-icon.png");
     background-color: white;
     background-size: cover;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border: none;
+    color: transparent;
+    font-family: "Cherry Bomb One";
+    font-size: 20px;
+    grid-column: 2;
 }
 
-#question {
+#question{
     font-family: "Chewy";
     text-align: center;
 }
 
-main {
+#home, #prompt-main, #palette-main{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
 
 main button {
@@ -33,5 +51,154 @@ main button {
     height: 63px;
     font-family: "Cherry Bomb One";
     font-size: 30px;
+    border: 3px solid black;
+    color: white;
 
 }
+
+#prompts-btn {
+    background-image:linear-gradient(#DC1313, #D65A13);
+}
+
+#prompts-btn:hover {
+    background-image: linear-gradient(#ff2b2b, #f96b19);
+}
+
+#color-btn {
+    background-image: linear-gradient(#F1EA1C, #50C10A);
+}
+
+#color-btn:hover {
+    background-image: linear-gradient(#fff82a, #61e80d);
+}
+
+#reference-btn {
+    background-image: linear-gradient(#3314E2, #7E10C2);
+}
+
+#reference-btn:hover {
+    background-image: linear-gradient(#3c19ff, #a019f4);
+}
+
+#suggest,
+#color-choice,
+#references p {
+    text-align: center;
+    font-family: "Chewy";
+    font-size: 25px;
+    border: 2px solid gray;
+}
+/* end of mobile home page css */
+
+/* Start of mobile prompts page css */
+
+#back{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    grid-column: 1;
+    grid-row: 2;
+    border: none;
+    font-size: 0;
+}
+
+#back i {
+    display: inline;
+    font-size: 2.5rem;
+}
+
+#back:hover {
+    background-color: rgb(51, 51, 51);
+}
+h2 {
+    font-family: "Unkempt";
+    text-align: center;
+    font-size: 30px;
+}
+#prompt-main p, #ref-main p {
+    font-family: "Chewy";
+    font-size: 20px;
+    text-align: center;
+}
+
+#extras, #ref-main {
+    display: flex;
+    flex-direction: column;
+}
+
+#extras input, select, #ref-main select {
+    height: 50px;
+    border: 2px solid black;
+}
+
+h3 {
+    font-family: "Unkempt";
+    font-size: 20px;
+}
+#prompt-btn {
+    background-color: red;
+    transition: 0.3s ease-in-out;
+}
+
+#prompt-btn:hover {
+    background-color: rgb(255, 62, 62);
+    animation: hover 0.3s forwards;
+
+}
+
+#style-btn {
+    background-color: darkorchid;
+    transition: 0.3s ease-in-out;
+}
+
+#style-btn:hover {
+    background-color: rgb(163, 84, 203);
+    animation: hover2 0.3s forwards;
+}
+/* End of mobile prompts pages css */
+
+/* Start of mobile color palette page css */
+#rand-palette {
+    background-color: orange;
+    transition: 0.3s ease-in-out;
+}
+
+#rand-palette:hover {
+    background-color: rgb(252, 175, 32);
+    animation: hover 0.3s forwards;
+}
+
+#comp-colors {
+    background-color: rgb(0, 90, 255);
+    transition: 0.3s ease-in-out;
+}
+
+#comp-colors:hover {
+    background-color: rgb(43, 117, 255);
+    animation: hover2 0.3s forwards;
+
+}
+
+@keyframes hover {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0px, -20px);}
+}
+
+@keyframes hover2 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0px, 20px);}
+}
+
+/* end of mobile Color Palette page css */
+
+/* Start of mobile Saves page css */
+
+#saves-main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#saved-prompt-display, #saved-palette-display {
+    border: 2px solid gray;
+}
+

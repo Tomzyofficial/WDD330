@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist's Corner</title>
     <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +16,14 @@
 <body>
     <header>
         <h1>Artist's Corner</h1>
-        <button id="saves"></button>
+        <button onclick="location.href='saves.html'" id="saves">Your Saves</button>
     </header>
-    <main>
+    <main id="home">
         <div id="question">
             <h2>How do you want to get out of Art Block today?</h2>
         </div>
         <section id="prompts">
-            <button id="prompts-btn">Prompts/Styles</button>
+            <button onclick="location.href='prompts.html'" id="prompts-btn">Prompts/Styles</button>
 
             <div id="suggest">Some suggestions:
                 <ol>
@@ -34,7 +35,7 @@
         </section>
 
         <section id="color-palette">
-            <button id="color-btn">Color Palettes</button>
+            <button onclick="location.href='color-palettes.html'" id="color-btn">Color Palettes</button>
             <div id="color-choice">Perhaps these colors:
 
             </div>
@@ -42,7 +43,7 @@
         </section>
 
         <section id="references">
-            <button id="reference-btn">References</button>
+            <button onclick="location.href='references.html'" id="reference-btn">References</button>
             <p>Need some refs?</p>
         </section>
 

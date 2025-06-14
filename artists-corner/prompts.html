@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist's Corner - Prompts and Styles</title>
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/large.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
+        <button onclick="location.href='home.html'" id="back">
+            <i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i>Back</button>
         <h1>Artist's Corner</h1>
-        <button id="saves">Your Saves</button>
+        <button onclick="location.href='saves.html'" id="saves">Your Saves</button>
     </header>
-    <main>
+    <main id="prompt-main">
         <h2>Prompts & Styles</h2>
         <div id="buttons">
             <p>Do you wanna look at Prompts or Styles?</p>
@@ -18,9 +24,6 @@
             <button id="style-btn">Styles</button>
         </div>
 
-        <div id="prompt-display">
-            
-        </div>
         <div id="extras">
             <p>Do you want anything specific in your prompt?</p>
             <input type="text">
@@ -31,6 +34,11 @@
                 <option value="celeb">Celebrities</option>
                 <option value="verb">Verbs</option>
             </select>
+        </div>
+
+        <div id="prompt-display">
+            <h3>Your Random Prompt or Style:</h3>
+        
         </div>
 
     </main>

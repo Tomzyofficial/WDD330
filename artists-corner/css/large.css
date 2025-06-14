@@ -1,0 +1,180 @@
+@media screen and (min-width: 415px){
+/* start of desktop home page css */
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #saves {
+        background: none;
+        color: white;
+        background-color: red;
+        width: 160px;
+        height: 50px;
+        border: 2px solid white;
+    }
+
+    #saves:hover {
+        background-color: rgb(255, 72, 72);
+    }
+
+    #home, #palette-main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    }
+
+    section {
+        display: contents;
+    }
+
+    #question {
+        grid-column: span 2;
+        font-size: 25px;
+    }
+
+    #prompts-btn {
+        grid-column: 1;
+    }
+
+    #suggest {
+        grid-column: 2;
+    }
+
+    #color-btn {
+        grid-column: 2;
+    }
+
+    #color-choice {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #references {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    #home button {
+        width: 100%;
+        height: 75%;
+        font-size: 45px;
+    }
+/* end of desktop home css */
+
+/* start of desktop prompts css */
+
+#back {
+    background-color: darkorchid;
+    width: 160px;
+    height: 50px;
+    border: 2px solid white;
+    color: white;
+    font-family: "Cherry Bomb One";
+    font-size: 20px;
+}
+
+#back i {
+    display: none;
+}
+#back:hover {
+    background-color: rgb(199, 86, 255);
+}
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#buttons p {
+    grid-column: span 2;
+    font-size: 30px;
+}
+
+#buttons button {
+    width: 85%;
+    transition: 0.3s ease-in-out;
+}
+
+#prompt-btn:hover {
+    animation: hoverLarge 0.3s forwards;
+}
+
+#style-btn:hover {
+    animation: hover2Large 0.3s forwards;
+}
+
+#extras {
+    display: block;
+    margin: 0 auto;
+}
+
+#extras input, select {
+    width: 100%;
+    height: 30px;
+}
+
+@keyframes hoverLarge {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-5deg);}
+}
+
+@keyframes hover2Large {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(5deg);}
+}
+
+/* end of desktop prompts page css */
+
+/* start of desktop color palette page css */
+#palette-main {
+    justify-items: center;
+}
+#palette-main h2 {
+    grid-column: span 2;
+}
+
+#rand-palette:hover, #comp-colors:hover {
+    animation: wobble 0.3s ease-in-out infinite;
+}
+
+#comp-colors {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#rand-palette, #comp-colors {
+    width: 85%;
+    font-size: min(4vw, 30px);
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(3deg);}
+    50% { transform: rotate(-3deg);}
+    75% { transform: rotate(3deg);}
+    100% {transform: rotate(0deg);}
+}
+/* End of desktop color palette page css */
+
+/* Start of desktop references page css */
+#ref-main select {
+    width: 25%;
+    margin: auto;
+}
+
+/* end of desktop references page css */
+
+/* start of desktop saves page css */
+#saves-main {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#saved-palettes h2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+}
