@@ -109,9 +109,10 @@
 #extras {
     display: block;
     margin: 0 auto;
+    text-align: center;
 }
 
-#extras input, select {
+#extras select {
     width: 100%;
     height: 30px;
 }
@@ -136,18 +137,21 @@
     grid-column: span 2;
 }
 
-#rand-palette:hover, #comp-colors:hover {
+#rand-palette:hover {
     animation: wobble 0.3s ease-in-out infinite;
 }
 
-#comp-colors {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-#rand-palette, #comp-colors {
+#rand-palette {
     width: 85%;
     font-size: min(4vw, 30px);
+}
+
+#palette-display {
+    display: flex;
+}
+
+#color-display {
+    display: flex;
 }
 
 @keyframes wobble {
@@ -159,13 +163,6 @@
 }
 /* End of desktop color palette page css */
 
-/* Start of desktop references page css */
-#ref-main select {
-    width: 25%;
-    margin: auto;
-}
-
-/* end of desktop references page css */
 
 /* start of desktop saves page css */
 #saves-main {

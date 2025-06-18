@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/large.css">
 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="./js/ui.mjs" type="module"></script>
 </head>
 <body>
     <header>
@@ -21,15 +23,19 @@
         <h2>Color Palettes</h2>
         <section id="palette">
             <button id="rand-palette">Random Palette</button>
-            <div id="palette-display">
-                <h3>Your Random Palette:</h3>
-            </div>
+            <h3>Your Random Palette:</h3>
+            <div id="palette-display"></div>
         </section>
 
         <section id="colors">
-            <button id="comp-colors">Complementary Colors</button>
+            <select name="moods" id="moods">
+                <option value="calm">Calm</option>
+                <option value="creative">Creative</option>
+                <option value="energetic">Energetic</option>
+            </select>
+            <button id="show">Show Mood Palette</button>
+            <h3>Mood Palette:</h3>
             <div id="color-display">
-                <h3>Complementary Colors to your Palette:</h3>
             </div>
         </section>
 

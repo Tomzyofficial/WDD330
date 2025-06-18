@@ -42,7 +42,7 @@ h1 {
 
 #home, #prompt-main, #palette-main{
     display: grid;
-    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     grid-gap: 10px;
 }
 
@@ -115,18 +115,19 @@ h2 {
     text-align: center;
     font-size: 30px;
 }
-#prompt-main p, #ref-main p {
+#prompt-main p{
     font-family: "Chewy";
     font-size: 20px;
     text-align: center;
 }
 
-#extras, #ref-main {
+#extras {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-#extras input, select, #ref-main select {
+#extras input, select{
     height: 50px;
     border: 2px solid black;
 }
@@ -155,6 +156,26 @@ h3 {
     background-color: rgb(163, 84, 203);
     animation: hover2 0.3s forwards;
 }
+
+#display {
+    font-size: 20px;
+}
+
+#apply {
+    background-color: orange;
+}
+
+#apply:hover {
+    background-color: rgb(255, 188, 64);
+}
+
+#savePrompt {
+    background-color: rgb(26, 134, 26);
+}
+
+#savePrompt:hover {
+    background-color: rgb(31, 151, 31);
+}
 /* End of mobile prompts pages css */
 
 /* Start of mobile color palette page css */
@@ -168,15 +189,46 @@ h3 {
     animation: hover 0.3s forwards;
 }
 
-#comp-colors {
-    background-color: rgb(0, 90, 255);
-    transition: 0.3s ease-in-out;
+#palette h3{
+    grid-column: 1;
 }
 
-#comp-colors:hover {
-    background-color: rgb(43, 117, 255);
-    animation: hover2 0.3s forwards;
+#palette-display {
+    grid-column: 1;
+}
 
+#color-display {
+    grid-column: 2;
+}
+
+#moods {
+    grid-column: 2;
+    grid-row: 2;
+    width: 75%;
+}
+
+#show {
+    grid-row: 3;
+    grid-column: 2;
+    background-color: rgb(97, 152, 235);
+}
+
+#show:hover {
+    background-color: rgb(107, 166, 255);
+}
+
+#savePalette {
+    grid-column: 1;
+    background-color: green;
+}
+
+#savePalette:hover {
+    background-color: rgb(0, 161, 0);
+}
+
+#colors h3 {
+    grid-column: 2;
+    grid-row: 4;
 }
 
 @keyframes hover {

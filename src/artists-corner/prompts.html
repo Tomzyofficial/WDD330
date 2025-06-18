@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/large.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="./js/ui.mjs" type="module"></script>
 </head>
 <body>
     <header>
@@ -25,20 +26,19 @@
         </div>
 
         <div id="extras">
-            <p>Do you want anything specific in your prompt?</p>
-            <input type="text">
 
             <p>What about a specific category?</p>
             <select name="prompt-cat" id="prompt-cat">
                 <option value="animal">Animals</option>
-                <option value="celeb">Celebrities</option>
-                <option value="verb">Verbs</option>
+                <option value="celeb">People</option>
             </select>
+            <button id="apply">Apply Category</button>
         </div>
 
         <div id="prompt-display">
-            <h3>Your Random Prompt or Style:</h3>
-        
+            <h3>Your Random Prompt or Style: (If 'Unknown Animal' or 'undefined' is shown, just reroll)</h3>
+            <div id="display"></div>
+            <button id="savePrompt">Save this Prompt?</button>
         </div>
 
     </main>
